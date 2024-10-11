@@ -2,47 +2,40 @@
 
 using namespace std;
 
-
-
+float num1, num2, result;
+char operation;
 int main()
 {
-    const int SUBJ = 8;
-    float a, b, c, d, e, f, g, h;
-    double sum;
-    float average;
-    cout << "Please enter grade for the first subject: ";
-    cin >> a;
-     cout << "Please enter grade for the second subject: ";
-    cin >> b;
-     cout << "Please enter grade for the third subject: ";
-    cin >> c;
-     cout << "Please enter grade for the fourth subject: ";
-    cin >> d;
-     cout << "Please enter grade for the fifth subject: ";
-    cin >> e;
-     cout << "Please enter grade for the sixth subject: " ;
-    cin >> f;
-     cout << "Please enter grade for the seventh subject: ";
-    cin >> g;
-     cout << "Please enter grade for the eighth subject: ";
-    cin >> h;
-    sum = a+b+c+d+e+f+g+h;
-    average = sum/SUBJ;
 
-   if (average >=90) {
-    cout << "Your average is: " <<average << ", Excellent!"<< endl;
-   }
-   else if (average >=80){
-    cout << "Your average is: " <<average << ", Very Good!" << endl;
-   }
-   else if (average >= 70) {
-    cout << "Your average is: " <<average << ", Good."<< endl;
-   }
-   else if (average >= 60) {
-    cout << "Your average is: " <<average << ", Needs Improvement."<< endl;
-   }
-   else {
-    cout << "Your average is: " <<average << ", Failing Grade." << endl;
-   }
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+    cout << "Enter an operator: ";
+    cin >> operation;
+
+     switch (operation)
+    {
+        case '+' :
+            cout <<num1<< " + " <<num2<< " = " <<result<< "\n"<< endl;
+            break;
+        case '-':
+            cout <<num1<< " - " <<num2<< " = " <<result<< "\n"<< endl;
+            break;
+        case '*':
+            cout <<num1<< " * " <<num2<< " = " <<result<< "\n"<< endl;
+            break;
+        case '/':
+        if (num2 !=0){
+            result = num1 / num2;
+            cout << num1<< " / " <<num2<< " = " <<result<< "\n"<< endl;
+        }
+        else
+            cout << "Error! Divided by zero. \n";
+            break;
+        default:
+            cout << "Invalid operation" << endl;
+    }
+
     return 0;
 }
