@@ -2,13 +2,17 @@
 
 using namespace std;
 
+int i;
 int main()
 {
-    cout << "Kristine Joy Humilde \n" << endl;
-    cout << "Norala, South Cotabato \n" << endl;
-    cout << "ACLC Koronadal \n" << endl;
-    int Age;
-    cout << "My age:" ;
-    cin >> Age;
+    cout << "Enter any number: ";
+    cin >> i;
+
+        if (i % 2 == 0) {
+            cout << i<< " is even number.";
+        } else {
+            cout << i<< " is odd number.";
+        }
+
     return 0;
 }
